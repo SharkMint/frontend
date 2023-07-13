@@ -40,7 +40,7 @@ function App() {
 
       <div className="body">
         <Container>
-          <Table striped bordered hover size="md" >
+          <Table striped bordered hover size="md">
             <thead>
               <tr>
                 <th>Id</th>
@@ -53,13 +53,15 @@ function App() {
             <tbody>
               {data > 0 &&
                 data.map((item, i) => {
-                  <tr>
-                    <td key={i}>{item.Id}</td>
-                    <td key={i}>{item.Link}</td>
-                    <td key={i}>{item.Title}</td>
-                    <td key={i}>{item.Content}</td>
-                    <td key={i}>{item.Date}</td>
-                  </tr>;
+                  return (
+                    <tr>
+                      <td key={i}>{item.Id}</td>
+                      <td key={i}>{item.Link}</td>
+                      <td key={i}>{item.Title}</td>
+                      <td key={i}>{item.Content}</td>
+                      <td key={i}>{item.Date}</td>
+                    </tr>
+                  );
                 })}
             </tbody>
           </Table>
